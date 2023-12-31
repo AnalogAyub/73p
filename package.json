@@ -1,24 +1,45 @@
 {
-  "name": "nodejs-sandbox",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "start": "nodemon index.js"
+  "name": "73p",
+  "description": "Custom theme for Ghost",
+  "version": "2024.1.2",
+  "private": true,
+  "author": "Bilal Ayub <bilal@ayub.co>",
+  "config": {
+    "posts_per_page": 999,
+    "card_assets": true
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
-  },
-  "keywords": [],
-  "author": "Ives van Hoorne",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
-  },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
+  "keywords": [
+    "ghost-theme"
+  ],
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "chalk": "^2.3.2",
+    "del": "^3.0.0",
+    "gscan": "^1.4.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^5",
+    "gulp-svg-sprite": "^1.4.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-zip": "^4.1.0",
+    "lodash": "^4.17.21",
+    "remove-svg-properties": "^0.3.4",
+    "run-sequence": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "sass": "^1.69.6"
+  },
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "license": "ISC",
+  "resolutions": {
+    "graceful-fs": "^4.2.11"
+  }
 }
