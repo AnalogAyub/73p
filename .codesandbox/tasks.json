@@ -12,7 +12,10 @@
     "start": {
       "name": "gulp",
       "command": "yarn run gulp",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 35729
+      }
     }
   }
 }
