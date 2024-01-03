@@ -71,18 +71,9 @@ gulp.task("styles-inject", function () {
 
 gulp.task("scripts", function () {
   return gulp
-    .src(
-      [
-        "./src/js/jquery.js",
-        // "./node_modules/swup/dist/swup.min.js", // Remove this line
-        // "./node_modules/@swup/preload-plugin/dist/SwupPreloadPlugin.min.js", // Remove this line
-        // "./node_modules/@swup/body-class-plugin/dist/SwupBodyClassPlugin.min.js", // Remove this line
-        // ... similarly, remove other swup related files ...
-        "./src/js/plugin/*.js",
-        "./src/js/theme.js",
-      ],
-      { allowEmpty: true },
-    )
+    .src(["./src/js/jquery.js", "./src/js/plugin/*.js", "./src/js/theme.js"], {
+      allowEmpty: true,
+    })
     .pipe(uglify())
     .pipe(concat("theme.min.js"))
     .pipe(gulp.dest("assets/js"))
